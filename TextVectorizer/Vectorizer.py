@@ -3,7 +3,7 @@ from subprocess import run
 import logging
 #from TextCalssfier import set_logger
 from os.path import basename
-from algorithm import strategies,get_similarity,get_annotation
+from .algorithm import strategies,get_similarity,get_annotation
 
 class Vectorizer:
     def __init__(self,vectorizer_name='spacy'):
@@ -87,8 +87,9 @@ class Vectorizer:
         return get_similarity(doc1,doc2,self.vectorizer)
     
     def annotate(self,sent):
-        return get_annotation(sent,self.vectorizer)
-
+        tmp = self.load_model('en_core_web_sm')
+        return get_annotation(sent,tmp)
+'''
 def main():
     text1= 'Apple is a company'#,'He is also good']
     text2 = 'Apple is a fruit'
@@ -102,3 +103,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+'''
