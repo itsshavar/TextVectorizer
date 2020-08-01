@@ -26,6 +26,5 @@ setup(name='TextVectorizer',
       url='https://github.com/itsshavar/TextVectorizer',
       packages=find_packages(exclude='test'),
       install_requires=['spacy', 'spacy-transformers'],
-      cmdclass={'install': CustomInstall},
-      
+      cmdclass={'install': CustomInstall}
       )
