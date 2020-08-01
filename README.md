@@ -5,7 +5,7 @@ A Library for representation learning of Text using Transformers such as BERT, A
 ```
 >>> from TextVectorizer import Vectorizer
 >>> from TextVectorizer import Vectorizer
->>> vec = Vectorizer('bert')
+>>> vec = Vectorizer()
 >>> for i in vec.annotate('Hi I am Rahul'):
 ...     print(i.text,i.pos_)
 Hi INTJ
@@ -17,7 +17,7 @@ Rahul PROPN
 # Document Similarity
 ```
 >>> from TextVectorizer import Vectorizer
->>> vec = Vectorizer()
+>>> vec = Vectorizer('bert')
 >>> doc1  = 'Apple is a company'
 >>> doc2 = 'Apple is fruit'
 >>> vec.similarity(doc1,doc2)
