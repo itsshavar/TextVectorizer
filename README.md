@@ -2,6 +2,7 @@
 A Library for representation learning of Text using Transformers such as BERT, AlBERT, RoBERTA and spacy
 
 # Text Annotation
+```
 >>> from TextVectorizer import Vectorizer
 >>> from TextVectorizer import Vectorizer
 >>> vec = Vectorizer('bert')
@@ -11,12 +12,15 @@ Hi INTJ
 I PRON
 am AUX
 Rahul PROPN
+````
 
 # Document Similarity
+```
 >>> from TextVectorizer import Vectorizer
 >>> vec = Vectorizer()
 >>> doc1  = 'Apple is a company'
 >>> doc2 = 'Apple is fruit'
 >>> vec.similarity(doc1,doc2)
 0.622238214831199
+```
 
