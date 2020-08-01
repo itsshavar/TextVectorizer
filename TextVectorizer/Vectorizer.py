@@ -3,7 +3,7 @@ from subprocess import run
 import logging
 #from TextCalssfier import set_logger
 from os.path import basename
-from algorithm import strategies,get_similarity
+from algorithm import strategies,get_similarity,get_annotation
 
 class Vectorizer:
     def __init__(self,vectorizer_name='spacy'):
@@ -85,13 +85,18 @@ class Vectorizer:
     
     def similarity(self,doc1,doc2):
         return get_similarity(doc1,doc2,self.vectorizer)
+    
+    def annotate(self,sent):
+        return get_annotation(sent,self.vectorizer)
 
 def main():
     text1= 'Apple is a company'#,'He is also good']
     text2 = 'Apple is a fruit'
     vec = Vectorizer()
-    vec_temp = vec.create_vector(text1)
-    print(vec_temp)
+    vec_temp = vec.annotate(text1)
+    for token in vec_temp:
+        print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,
+            token.shape_, token.is_alpha, token.is_stop)
     #print('Similarity of Documents :{}'.format(vec.similarity(text1,text2)))
     print('Length of Vector : {}'.format(len(vec_temp)))
 

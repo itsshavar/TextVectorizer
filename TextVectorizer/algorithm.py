@@ -33,5 +33,14 @@ def get_similarity(doc1, doc2, vectorizer):
 
     return vectorizer(doc1).similarity(vectorizer(doc2))
 
-def get_annotation():
-    return None
+def get_annotation(sent,vectorizer):
+    ''' Returns the Annotation of given senetence.This includes POS Tag
+        NER, Dependecy etc.
+
+    Args:
+        sent (str): sentence to be tagged
+    
+    Retruns 
+        spacy.token : Tagged iterator object.
+    '''
+    return vectorizer(sent)
