@@ -24,3 +24,15 @@ Rahul PROPN
 0.622238214831199
 ```
 
+# Create Vector
+```
+>>> from TextVectorizer import Vectorizer
+>>> vec = Vectorizer('bert')
+>>> doc1  = 'Apple is a company'
+>>> vec.create_vector(doc1)
+array([ 1.86449289e-01, -4.55981702e-01, -5.55467248e-01, -1.63073212e-01,
+        ...
+        7.34284699e-01,  5.51161587e-01, -2.69515336e-01, -2.89130598e-01],
+      dtype=float32)
+
+```
