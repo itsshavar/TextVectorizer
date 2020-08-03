@@ -36,3 +36,4 @@ array([ 1.86449289e-01, -4.55981702e-01, -5.55467248e-01, -1.63073212e-01,
       dtype=float32)
 
 ```
+For BERT : bert, RoBERT: robert, DistilBERT:distilbert and for spacy use spacy in the argument.
