@@ -1,3 +1,5 @@
+[![Downloads](https://pepy.tech/badge/textvectorizer)](https://pepy.tech/project/textvectorizer)
+
 # TextVectorizer
 A Library for representation learning of Text using Transformers such as BERT, AlBERT, RoBERTA and spacy
 
