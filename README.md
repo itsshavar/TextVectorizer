@@ -1,12 +1,11 @@
 
-[![Downloads](https://pepy.tech/badge/textvectorizer)](https://pepy.tech/project/textvectorizer) [![PyPI version](https://badge.fury.io/py/TextVectorizer.svg)](https://badge.fury.io/py/TextVectorizer)
+[![Downloads](https://pepy.tech/badge/textvectorizer)](https://pepy.tech/project/textvectorizer) [![PyPI version](https://badge.fury.io/py/TextVectorizer.svg)](https://badge.fury.io/py/TextVectorizer) [![build](https://travis-ci.org/itsshavar/TextVectorizer.svg?branch=master)](https://travis-ci.org/itsshavar/TextVectorizer.svg?branch=master)
 
 # TextVectorizer
 A Library for representation learning of Text using Transformers such as BERT, AlBERT, RoBERTA and spacy
 
 # Text Annotation
 ```
->>> from TextVectorizer import Vectorizer
 >>> from TextVectorizer import Vectorizer
 >>> vec = Vectorizer()
 >>> for i in vec.annotate('Hi I am Rahul'):
