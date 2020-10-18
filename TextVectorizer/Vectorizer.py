@@ -42,13 +42,13 @@ class Vectorizer:
         Returns:
             Array : vector of the input text
         '''
-        if len(text.strip().split()) > 1:
-            tmp = []
-            for i in text.strip().split():
-                tmp.append(self.vectorizer(i).vector)
-            return strategies(tmp,strategy)
-        else:
-            return self.vectorizer(text).vector
+        #if len(text.strip().split()) > 1:
+         #   tmp = []
+          #  for i in text.strip().split():
+           #     tmp.append(self.vectorizer(i).vector)
+           # return strategies(tmp,strategy)
+        #else:
+        return self.vectorizer(text).vector
 
     def check_model_available(self,model_name):
         ''' Checking if transfomer is present
